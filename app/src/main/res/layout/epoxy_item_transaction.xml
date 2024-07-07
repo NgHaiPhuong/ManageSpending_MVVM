@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="balance"
+            type="String" />
+        <variable
+            name="expand"
+            type="String" />
+        <variable
+            name="income"
+            type="String" />
+        <variable
+            name="arms"
+            type="String" />
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="#DDDDDD"
+        android:layout_height="wrap_content"
+        android:onClick="@{onClick}">
+        <TextView
+            android:id="@+id/tvbalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{balance}"
+            android:textSize="50dp"
+            android:layout_marginBottom="15dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/money" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXPAND: "
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tvbalance"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="@dimen/_15sdp"/>
+        <TextView
+            android:id="@+id/tvspend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{expand}"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/tv1"
+            android:layout_below="@id/tvbalance"
+            android:layout_marginStart="40dp"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/red"/>
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INCOME: "
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/tv1"
+            android:layout_marginStart="20dp"
+            android:textSize="@dimen/_15sdp"/>
+        <TextView
+            android:id="@+id/tvincome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{income}"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/tv2"
+            android:layout_below="@id/tv1"
+            android:layout_marginStart="40dp"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/money"/>
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADJUST ARMS:"
+            android:textStyle="bold"
+            android:layout_below="@id/tv2"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="@dimen/_15sdp" />
+        <TextView
+            android:id="@+id/tvarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{arms}"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/tv3"
+            android:layout_below="@id/tv2"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="23dp"
+            android:textColor="#99FF33"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HISTORY"
+            android:textStyle="bold"
+            android:layout_below="@id/tv3"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="@dimen/_18sdp"/>
+
+
+    </RelativeLayout>
+</layout>

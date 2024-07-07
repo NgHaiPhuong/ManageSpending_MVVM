@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/cardview">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="Amount of money in a month"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:id="@+id/etmoney"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tv1"
+        android:hint="Total money"
+        android:inputType="numberDecimal"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="Adjust arms"
+        android:textSize="20sp"
+        android:layout_below="@id/etmoney"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="5dp"/>
+
+    <EditText
+        android:id="@+id/etlimit"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tv2"
+        android:hint="Total limit"
+        android:inputType="numberDecimal"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="20dp"/>
+</RelativeLayout>

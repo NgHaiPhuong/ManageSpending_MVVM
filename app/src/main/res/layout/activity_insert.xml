@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="insertViewModel"
+            type="com.example.managespending.presentation.insert.InsertViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.insert.InsertActivity"
+        xmlns:bind="http://schemas.android.com/tools"
+        android:background="#DDDDDD">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/card"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rev">
+
+            <RelativeLayout
+                android:id="@+id/category_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="btnShowCanlender">
+
+                <ImageView
+                    android:id="@+id/imgcategory"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/wallet" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/imgcategory"
+                    android:text="Category"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="38dp"
+                    android:layout_toEndOf="@id/tv1"
+                    android:text="@={insertViewModel.tvname}"
+                    android:inputType="text"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/imgnext1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_next" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/calender_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="btnShowCanlender">
+
+                <ImageView
+                    android:id="@+id/imgcalendar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_calendar" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/imgcalendar"
+                    android:text="Date"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="67dp"
+                    android:layout_toEndOf="@id/text"
+                    android:text="@={insertViewModel.tvdate}"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/imgnext"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hour_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="btnShowOClock">
+                <ImageView
+                    android:id="@+id/imghour"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_time" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/imghour"
+                    android:text="Time"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvhour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="65dp"
+                    android:layout_toEndOf="@id/text1"
+                    android:text="@={insertViewModel.tvtime}"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/note_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/imgnote"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="3dp"
+                    android:src="@drawable/ic_note" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/imgnote"
+                    android:text="Take note"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etnote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@id/text2"
+                    android:hint="Enter notes"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="#808080"
+                    android:textSize="14sp"
+                    android:text="@={insertViewModel.tvnote}" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_next" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_dim_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8000"
+            android:onClick="@{()->insertViewModel.showDimBackground()}"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/search_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/cardview"
+                android:textDirection="ltr"
+                app:tabIndicatorColor="@color/cardview"
+                app:tabIndicatorFullWidth="true"
+                app:tabSelectedTextColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tab_layout"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_editor_absoluteX="16dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/rev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imgback"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src = "@drawable/ic_arrow"
+                android:layout_marginStart="5dp"
+                android:layout_marginVertical="15dp"
+                android:layout_alignParentStart="true"
+                android:onClick="@{()->insertViewModel.onBackClicked()}"/>
+
+            <TextView
+                android:id="@+id/imgsave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textSize="23sp"
+                android:text="SAVE"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/black"
+                android:onClick="@{()->insertViewModel.saveTrans()}"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgItem"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/imgback"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                bind:imageUrl="spend/car.png"
+                android:background="@drawable/circle_background"
+                android:onClick="@{()->insertViewModel.showListCategory()}"/>
+
+            <TextView
+                android:id="@+id/tvnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgback"
+                android:layout_toEndOf="@id/imgItem"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/ic_money"
+                android:drawablePadding="10dp"
+                android:hint="Input money"
+                android:inputType="number"
+                android:padding="13dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="30sp"
+                android:text="@={insertViewModel.tvcost}"
+                android:onClick="@{()->insertViewModel.showCalculation()}"/>
+
+            <TextView
+                android:id="@+id/tvsum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below= "@id/tvnumber"
+                android:layout_alignParentEnd="true"
+                android:textSize="16sp"
+                android:hint = "0"
+                android:textColorHint="@color/black"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/calculation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/dong1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <Button
+                    android:id="@+id/btn7"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="7"
+                    android:textSize="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btn8"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="8"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btn9"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="9"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btnchia"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#3399FF"
+                    android:text="/"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/dong2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/dong1">
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="4"
+                    android:textSize="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btn5"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="5"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btn6"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="6"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btnnhan"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#3399FF"
+                    android:text="x"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dong3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/dong2">
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="1"
+                    android:textSize="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="2"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="3"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btntru"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#3399FF"
+                    android:text="-"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dong4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/dong3">
+
+                <Button
+                    android:id="@+id/btnpphay"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="."
+                    android:textSize="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btn0"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="0"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btndelete"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="CE"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btncong"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#3399FF"
+                    android:text="+"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dong5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/dong4">
+
+                <Button
+                    android:id="@+id/btnbang"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#808080"
+                    android:text="="
+                    android:textSize="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+
+                <Button
+                    android:id="@+id/btnclear"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#3399ff"
+                    android:text="CLEAR"
+                    android:textSize="25dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:cornerRadius="5dp"
+                    android:layout_alignParentStart="true"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

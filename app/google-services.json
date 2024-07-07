@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "991412340572",
+    "project_id": "managespending-86c74",
+    "storage_bucket": "managespending-86c74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991412340572:android:d54e6c13659f6de1526399",
+        "android_client_info": {
+          "package_name": "com.example.managespending"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-QepHRpGARoIiokl44WqyEIQuD6OjbxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="name"
+            type="String" />
+
+        <variable
+            name="cost"
+            type="String" />
+
+        <variable
+            name="url"
+            type="String" />
+        
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview"
+        android:paddingBottom="10dp"
+        android:layout_marginHorizontal="15dp"
+        xmlns:bind="http://schemas.android.com/tools"
+        android:onClick="@{onClick}">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgtransaction"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            bind:imageUrl="@{url}"
+            android:contentDescription="@null"
+            android:background="@drawable/circle_background"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/tvname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgtransaction"
+            android:text="@{name}"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="30dp"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvcost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@{cost}"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+</layout>

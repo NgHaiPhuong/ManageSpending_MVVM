@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="VIP">
+        <menu>
+            <item android:id="@+id/noADS"
+                android:icon="@drawable/lock"
+                android:title="Không quảng cáo"/>
+            <item android:id="@+id/changeColor"
+                android:icon="@drawable/ic_color"
+                android:title="Thay đổi màu sắc"/>
+            <item android:id="@+id/fileExcel"
+                android:icon="@drawable/ic_file"
+                android:title="Chức năng xuất file Excel"/>
+            <item android:id="@+id/changeBright"
+                android:icon="@drawable/ic_brightness"
+                android:title="Sắc thái tối"/>
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/backup"
+            android:icon="@drawable/ic_backup"
+            android:title="Sao lưu/phục hồi"/>
+        <item android:id="@+id/checkUpdate"
+            android:icon="@drawable/ic_update"
+            android:title="Kiểm tra cập nhật"/>
+        <item android:id="@+id/review"
+            android:icon="@drawable/ic_star"
+            android:title="Đánh giá"/>
+        <item android:id="@+id/setup"
+            android:icon="@drawable/ic_settings"
+            android:title="Cài đặt"/>
+        <item android:id="@+id/feedback"
+            android:icon="@drawable/ic_feedback"
+            android:title="Phản hồi qua email"/>
+    </group>
+</menu>
